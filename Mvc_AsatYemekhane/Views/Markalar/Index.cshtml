@@ -1,0 +1,36 @@
+﻿@model List<Mvc_AsatYemekhane.Models.Entity.Markalar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Marka Listesi</h2>  
+<table class="table">
+    <thead style="background-color:antiquewhite">
+        <tr>
+            <td>ID</td>
+            <td>Kategori</td>
+            <td>Marka</td>
+            <td>Açıklama</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+            {
+                <tr>
+                    <th>
+                        @item.ID
+                    </th>
+                    <td>@item.Kategoriler.Kategori</td>
+                    <td>@item.Marka</td>
+                    <td>@item.Aciklama</td>
+                    <td><a href="#" class="btn btn-danger">Sil</a></td>
+                    <td><a href="#" class="btn btn-primary">Güncelle</a></td>
+                </tr>
+            }
+    </tbody>
+</table>
+<div class="form-group">
+    <a href="/Markalar/Ekle/" class="btn btn-success">Marka Ekle</a>
+</div>
+

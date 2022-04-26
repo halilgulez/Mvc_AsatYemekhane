@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BirimlerController.cs" />
     <Compile Include="Controllers\KategorilerController.cs" />
+    <Compile Include="Controllers\MarkalarController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -224,6 +225,10 @@
     <Content Include="Views\Kategoriler\Ekle.cshtml" />
     <Content Include="Views\Birimler\Kaydet.cshtml" />
     <Content Include="Views\Kategoriler\GuncelleBilgiGetir.cshtml" />
+    <Content Include="Views\Kategoriler\SilBilgiGetir.cshtml" />
+    <Content Include="Views\Birimler\SilBilgiGetir.cshtml" />
+    <Content Include="Views\Markalar\Index.cshtml" />
+    <Content Include="Views\Markalar\Ekle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
