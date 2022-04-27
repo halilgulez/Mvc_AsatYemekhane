@@ -11,7 +11,8 @@ namespace Mvc_AsatYemekhane.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Markalar
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,8 +22,13 @@ namespace Mvc_AsatYemekhane.Models.Entity
         }
     
         public int ID { get; set; }
+        [Required(ErrorMessage ="Kategori alani bos gecilemez.")]
         public int KategoriID { get; set; }
+        [Required(ErrorMessage ="Marka alani bos gecilemez.")]
         public string Marka { get; set; }
+        [Required(ErrorMessage ="Aciklama Alani bos gecilemez.")]
+
+        [Display(Name ="Aç?klama")]
         public string Aciklama { get; set; }
     
         public virtual Kategoriler Kategoriler { get; set; }
