@@ -11,7 +11,8 @@ namespace Mvc_AsatYemekhane.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Kategoriler
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,7 +23,10 @@ namespace Mvc_AsatYemekhane.Models.Entity
         }
     
         public int ID { get; set; }
+        [Required (ErrorMessage ="Kategori Alani Bos Gecilemez.")]
         public string Kategori { get; set; }
+        [Required(ErrorMessage = "Aciklama Alani Bos Geçilemez.")]
+        [Display(Name ="Aç?klama")]
         public string Aciklama { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

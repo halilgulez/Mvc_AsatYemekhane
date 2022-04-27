@@ -34,6 +34,8 @@ namespace Mvc_AsatYemekhane.Controllers
         [HttpPost]  
         public ActionResult Ekle(Markalar m)
         {
+            db.Entry(m).State = System.Data.Entity.EntityState.Added;
+            db.SaveChanges();   
             return RedirectToAction("Index");
         }
     }
